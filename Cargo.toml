@@ -1,0 +1,11 @@
+[package]
+name = "readwrite"
+version = "0.1.0"
+authors = ["Vitaly \"_Vi\" Shukela <vi0oss@gmail.com>"]
+license = "MIT/Apache-2.0"
+repository = "https://github.com/vi/readwrite"
+description = "Combine Read and Write into a single Read+Write object"
+readme = "README.md"
+categories = []
+keywords = ["read","write","combine","socket"]
+
