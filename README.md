@@ -16,3 +16,10 @@ fn main() {
     let (s1,s2) = (ReadWrite::new(r1,w2), ReadWrite::new(r2,w1));
 }
 ```
+
+There is also async implementation for combining `tokio_io::AsyncRead` and `tokio_io::AsyncWrite` into a `AsyncRead + AsyncWrite`. Enable the non-default `tokio` Cargo feature for it to work:
+
+```
+[dependencies]
+readwrite = {version="0.1.1", features=["tokio"]}
+```
