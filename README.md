@@ -2,7 +2,7 @@ readwrite
 ---
 
 
-Given two things, one of which implements `std::io::Read` and other implements `std::io::Write`, make a single socket-like object which implmenets `Read + Write`. Note that you can't write to it while waiting for data to come from read part.
+Given two things, one of which implements `std::io::Read` and other implements `std::io::Write`, make a single socket-like object which implements `Read + Write`. Note that you can't write to it while waiting for data to come from read part.
 
 Example: generate a virtual socketpair.
 
