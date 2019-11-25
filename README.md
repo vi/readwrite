@@ -23,3 +23,7 @@ There is also async implementation for combining `tokio_io::AsyncRead` and `toki
 [dependencies]
 readwrite = {version="0.1.1", features=["tokio"]}
 ```
+
+# See also
+
+* [duplexify](https://github.com/async-rs/duplexify) for async-std version.
