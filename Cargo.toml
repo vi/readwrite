@@ -1,6 +1,6 @@
 [package]
 name = "readwrite"
-version = "0.1.2"
+version = "0.2.0"
 authors = ["Vitaly \"_Vi\" Shukela <vi0oss@gmail.com>"]
 license = "MIT/Apache-2.0"
 repository = "https://github.com/vi/readwrite"
@@ -8,14 +8,18 @@ description = "Combine Read and Write into a single Read+Write object"
 readme = "README.md"
 categories = []
 keywords = ["read","write","combine","socket"]
+edition="2018"
 
 [dependencies]
-tokio-io = {version = "0.1", optional = true }
-futures = {version = "0.1", optional = true }
+tokio_dep = {version = "1", optional = true, package="tokio" }
+futures = {version = "0.3", optional = true }
+pin-project-lite = { version = "0.2.6", optional = true }
 
 [features]
-tokio = ["tokio-io","futures"]
+default = []
+tokio = ["tokio_dep", "pin-project-lite"]
+asyncstd = ["futures", "pin-project-lite"]
 
 [package.metadata.docs.rs]
-features = [ "tokio" ]
+features = [ "tokio", "asyncstd" ]
 
