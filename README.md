@@ -17,7 +17,8 @@ fn main() {
 }
 ```
 
-There is also async implementation for combining `tokio_io::AsyncRead` and `tokio_io::AsyncWrite` into a `AsyncRead + AsyncWrite`. Enable the non-default `tokio` Cargo feature for it to work:
+There is also async implementation for combining `tokio::io::AsyncRead` and `tokio::io::AsyncWrite` into a `AsyncRead + AsyncWrite`. Enable the non-default `tokio` Cargo feature for it to work:
+Similarly there is `futures::io::AsyncRead/AsyncWrite` version gated under `asyncstd` Cargo feature.
 
 ```
 [dependencies]
@@ -26,4 +27,5 @@ readwrite = {version="0.1.1", features=["tokio"]}
 
 # See also
 
-* [duplexify](https://github.com/async-rs/duplexify) for async-std version.
+* [duplexify](https://github.com/async-rs/duplexify) - alternative implementation for async-std
+* Use version `0.1` of this crate for old `tokio-core` support. `tokio 0.1` is not supported.
